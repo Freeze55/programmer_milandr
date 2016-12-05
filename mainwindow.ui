@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>738</width>
+    <height>894</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>K4000_CPU_Tools</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>30</width>
+    <height>30</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_11">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_12">
+        <item>
+         <widget class="QLabel" name="label_13">
+          <property name="maximumSize">
+           <size>
+            <width>178</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Выбранный файл:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineFile">
+          <property name="maximumSize">
+           <size>
+            <width>100000</width>
+            <height>20</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QSplitter" name="splitter">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <widget class="QWidget" name="layoutWidget">
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QTreeView" name="treeView">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>254</width>
+              <height>750</height>
+             </size>
+            </property>
+            <property name="statusTip">
+             <string notr="true"/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QPlainTextEdit" name="consol">
+            <property name="minimumSize">
+             <size>
+              <width>253</width>
+              <height>289</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="plainText">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="openHex">
+              <property name="text">
+               <string>Открыть файл</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="ClearBtn">
+              <property name="text">
+               <string>Очистить</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="RecordBtn">
+              <property name="text">
+               <string>Записать</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="progressBar">
+        <property name="maximum">
+         <number>100</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="textVisible">
+         <bool>true</bool>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="invertedAppearance">
+         <bool>false</bool>
+        </property>
+        <property name="textDirection">
+         <enum>QProgressBar::TopToBottom</enum>
+        </property>
+        <property name="format">
+         <string>%p%</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_12">
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>194</width>
+          <height>150</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+         </font>
+        </property>
+        <property name="acceptDrops">
+         <bool>false</bool>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"> QGroupBox {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #E0E0E0, stop: 1 #FFFFFF);
+     border: 2px solid gray;
+     border-radius: 5px;
+margin-top: 2ex; /* оставляем пространство вверху для заголовка */
+ }
+
+ QGroupBox::title {
+     subcontrol-origin: margin;
+     subcontrol-position: top center; /* помещаем вверху по центру */
+     padding: 0 3px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #FFOECE, stop: 1 #FFFFFF);
+ }</string>
+        </property>
+        <property name="title">
+         <string>Программирование</string>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_8">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QPushButton" name="pushButton_2">
+             <property name="text">
+              <string>Программировать</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="EraseAll">
+             <property name="text">
+              <string>Очистить все</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="Erase">
+             <property name="text">
+              <string>Очистить</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="Programm">
+             <property name="text">
+              <string>Програмировать</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="verify">
+             <property name="text">
+              <string>Проверка</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="minimumSize">
+         <size>
+          <width>194</width>
+          <height>176</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>194</width>
+          <height>176</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"> QGroupBox {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #E0E0E0, stop: 1 #FFFFFF);
+     border: 2px solid gray;
+     border-radius: 5px;
+margin-top: 2ex; /* оставляем пространство вверху для заголовка */
+ }
+
+ QGroupBox::title {
+     subcontrol-origin: margin;
+     subcontrol-position: top center; /* помещаем вверху по центру */
+     padding: 0 3px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #FFOECE, stop: 1 #FFFFFF);
+ }</string>
+        </property>
+        <property name="title">
+         <string>Настройки порта</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_9">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>RS232</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_14">
+               <item>
+                <widget class="QLabel" name="label_12">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>18</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>●</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QComboBox" name="portBox"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="portBtn">
+             <property name="text">
+              <string>Открыть порт</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string>Скорость</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="baud"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string>Четность</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="patirity"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="minimumSize">
+         <size>
+          <width>194</width>
+          <height>190</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>194</width>
+          <height>190</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"> QGroupBox {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #E0E0E0, stop: 1 #FFFFFF);
+     border: 2px solid gray;
+     border-radius: 5px;
+margin-top: 2ex; /* оставляем пространство вверху для заголовка */
+ }
+
+ QGroupBox::title {
+     subcontrol-origin: margin;
+     subcontrol-position: top center; /* помещаем вверху по центру */
+     padding: 0 3px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #FFOECE, stop: 1 #FFFFFF);
+ }</string>
+        </property>
+        <property name="title">
+         <string>Проверка ядра ЦП</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_10">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>RS485</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_13">
+               <item>
+                <widget class="QLabel" name="label_11">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>18</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>●</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QComboBox" name="portBox2"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="testBtn">
+             <property name="text">
+              <string>Запустить тест</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton">
+             <property name="text">
+              <string>Сохранить отчет в БД</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_14">
+             <property name="text">
+              <string>Пользватель:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="FamComBox"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="openReportsBtn">
+             <property name="text">
+              <string>Открыть отчеты из БД</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="maximumSize">
+         <size>
+          <width>194</width>
+          <height>252</height>
+         </size>
+        </property>
+        <property name="mouseTracking">
+         <bool>false</bool>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="acceptDrops">
+         <bool>false</bool>
+        </property>
+        <property name="statusTip">
+         <string/>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"> QGroupBox {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #E0E0E0, stop: 1 #FFFFFF);
+     border: 2px solid gray;
+     border-radius: 5px;
+margin-top: 2ex; /* оставляем пространство вверху для заголовка */
+ }
+
+ QGroupBox::title {
+     subcontrol-origin: margin;
+     subcontrol-position: top center; /* помещаем вверху по центру */
+     padding: 0 3px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #FFOECE, stop: 1 #FFFFFF);
+ }</string>
+        </property>
+        <property name="title">
+         <string>Настройка ядра ЦП</string>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_11">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <item>
+              <widget class="QLabel" name="label_7">
+               <property name="text">
+                <string>Тип</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="TypeCmbBox"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_9">
+             <item>
+              <widget class="QLabel" name="label_8">
+               <property name="text">
+                <string>Номер</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="numbCP"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_10">
+             <item>
+              <widget class="QLabel" name="label_6">
+               <property name="font">
+                <font>
+                 <pointsize>7</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Получить MAC из БД</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="getMacPromBD">
+               <property name="minimumSize">
+                <size>
+                 <width>65</width>
+                 <height>23</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>65</width>
+                 <height>23</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Получить</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_5">
+             <property name="text">
+              <string>Записать в *hex</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkBox">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="mouseTracking">
+              <bool>true</bool>
+             </property>
+             <property name="acceptDrops">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Авт/руч</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="text">
+                <string>MAC1</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="Mac1_line">
+               <property name="minimumSize">
+                <size>
+                 <width>133</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>133</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <widget class="QLabel" name="label_5">
+               <property name="text">
+                <string>MAC2</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="Mac2_line">
+               <property name="minimumSize">
+                <size>
+                 <width>133</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>133</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="text">
+                <string>IP</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="ip_line">
+               <property name="minimumSize">
+                <size>
+                 <width>133</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>133</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>738</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
